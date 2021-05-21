@@ -1,0 +1,30 @@
+.profile__edit-button {
+  background-image: url("../../../images/eddButt.svg");
+  padding: 0;
+  background-color: #000000;
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  grid-area: edbut;
+  align-self: center;
+  outline: 0;
+  cursor: pointer;
+  transition: opacity .4s linear;
+}
+
+.profile__edit-button:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 880px) {
+  .profile__edit-button {
+    width: 18px;
+    height: 18px;
+    margin-right: 19px;
+    background-size: 7.5px 7.5px;
+  }
+}

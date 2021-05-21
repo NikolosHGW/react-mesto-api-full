@@ -1,0 +1,16 @@
+.info-tool__container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  max-width: 430px;
+  width: 100%;
+  position: relative;
+  align-items: center;
+}
+
+@media screen and (max-width: 520px) {
+  .info-tool__container {
+    max-width: 280px;
+  }
+}

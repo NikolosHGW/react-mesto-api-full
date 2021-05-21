@@ -1,0 +1,25 @@
+.header__menu-button {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  width: 24px;
+  height: 21px;
+  border-top: 3px solid #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
+  margin-right: 30px;
+  transition: opacity .4s linear;
+}
+
+.header__menu-button:hover {
+  opacity: .6;
+}
+
+@media screen and (min-width: 701px) {
+  .header__menu-button {
+    display: none;
+  }
+}

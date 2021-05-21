@@ -1,0 +1,18 @@
+.header__login {
+  display: flex;
+  margin-top: 7px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@media screen and (max-width: 700px) {
+  .header__login {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(84,84,84, .7);
+    box-sizing: border-box;
+    padding-bottom: 40px;
+    margin: 0;
+  }
+}

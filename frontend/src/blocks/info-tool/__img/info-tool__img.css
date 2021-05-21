@@ -1,0 +1,11 @@
+.info-tool__img {
+  margin: 60px 0 32px;
+  width: 120px;
+  height: 120px;
+}
+
+@media screen and (max-width: 520px) {
+  .info-tool__img {
+    margin: 50px 0 40px;
+  }
+}

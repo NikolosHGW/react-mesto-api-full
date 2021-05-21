@@ -1,0 +1,9 @@
+.header__login_opened {
+  display: flex;
+}
+
+@media screen and (min-width: 701px) {
+  .header__login_opened {
+    display: none;
+  }
+}

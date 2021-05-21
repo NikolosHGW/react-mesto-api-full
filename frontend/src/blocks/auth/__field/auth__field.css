@@ -1,0 +1,11 @@
+.auth__field {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0 0;
+  padding: 0;
+  position: relative;
+}
+
+.auth__field:first-child {
+  margin: 0;
+}

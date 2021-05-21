@@ -1,0 +1,16 @@
+.footer {
+  width: 100%;
+  font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+@media screen and (min-width: 581px) and (max-width: 880px) {
+  .footer {
+    max-width: 581px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .footer {
+    max-width: 282px;
+  }
+}
