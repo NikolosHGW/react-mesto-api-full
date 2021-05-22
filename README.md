@@ -3,3 +3,4 @@
   
 Ссылка на сайт: https://express.mesto.nomoredomains.club  
 Публичный IP-адрес сервера: http://84.201.157.18  
+Домен бэкенда: https://api.express.mesto.nomoredomains.rocks  

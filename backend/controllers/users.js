@@ -39,8 +39,28 @@ function createUser(req, res, next) {
     .then((hash) => userModel.create({
       name, about, avatar, email, password: hash,
     }))
-    .then((user) => res.send(user))
-    .catch(next);
+    .then((user) => {
+      const {
+        name: createdName,
+        about: createdAbout,
+        avatar: createdAvatar,
+        _id,
+        email: createdEmail,
+      } = user;
+      res.send({
+        name: createdName,
+        about: createdAbout,
+        avatar: createdAvatar,
+        _id,
+        email: createdEmail,
+      });
+    })
+    .catch((err) => {
+      if (err.code === 11000) {
+        next(new HandError('Такой email уже существует', 409));
+      }
+      next(err);
+    });
 }
 
 function updateUser(req, res, next) {

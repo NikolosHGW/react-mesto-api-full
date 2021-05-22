@@ -2,14 +2,14 @@
   "name": "express-mesto",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "lint": "npx eslint",
+    "lint": "npx eslint .",
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Nikolos",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^7.24.0",

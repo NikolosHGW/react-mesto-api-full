@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const HandError = require('../errors/HandError');
 
 const cardSchema = new mongoose.Schema({
   name: {
@@ -12,9 +13,11 @@ const cardSchema = new mongoose.Schema({
     required: true,
     validate: {
       validator(v) {
-        return /\bhttps?:\/\/[a-z0-9-._~:/?#[\]@!$&'()*+,;=]/g.test(v);
+        if (/\bhttps?:\/\/[a-z0-9-._~:/?#[\]@!$&'()*+,;=]/g.test(v)) {
+          return true;
+        }
+        throw new HandError('Некорректная ссылка', 400);
       },
-      message: 'Некорректная ссылка',
     },
   },
   owner: {

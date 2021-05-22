@@ -21,9 +21,11 @@ const userSchema = new mongoose.Schema({
     default: 'https://pictures.s3.yandex.net/resources/jacques-cousteau_1604399756.png',
     validate: {
       validator(v) {
-        return /\bhttps?:\/\/[a-z0-9-._~:/?#[\]@!$&'()*+,;=]/g.test(v);
+        if (/\bhttps?:\/\/[a-z0-9-._~:/?#[\]@!$&'()*+,;=]/g.test(v)) {
+          return true;
+        }
+        throw new HandError('Некорректная ссылка', 400);
       },
-      message: 'Некорректная ссылка',
     },
   },
   email: {
@@ -32,15 +34,16 @@ const userSchema = new mongoose.Schema({
     unique: true,
     validate: {
       validator(v) {
-        return validatorEmail.isEmail(v);
+        if (validatorEmail.isEmail(v)) {
+          return true;
+        }
+        throw new HandError('Некорректный email', 400);
       },
-      message: 'Некорректный email',
     },
   },
   password: {
     type: String,
     required: true,
-    minlength: 8,
     select: false,
   },
 });
